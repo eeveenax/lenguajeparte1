@@ -1,0 +1,270 @@
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/*mover al centro*/
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #a0dada;
+  width: 90%;
+  text-align: left;
+  animation-name: slide-in;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-250px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 0.9;
+  }
+}
+
+a {
+  margin-right: 10px;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: black;
+}
+
+.tAutomatico {
+  padding: 30px;
+  margin: 0;
+  background-color: rgb(164, 70, 30, 0.3);
+}
+
+.tAutomaticoTitulo {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  color: #a4461e;
+  animation-name: fadein;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  height: 20px;
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+p {
+  margin: auto;
+  text-align: justify;
+  font-family: "Times New Roman", Times, serif;
+  padding: 3% 20% 3%;
+}
+
+#googleH,
+#deeplH,
+#ponsH {
+  margin: auto;
+  text-align: justify;
+  font-family: "Times New Roman", Times, serif;
+  padding: 3% 20% 3%;
+  animation-name: show;
+  animation-duration: 5s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#traductoresAuto {
+  margin: auto;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  color: #b26521;
+  margin-top: 1vh;
+}
+
+#google,
+#deepl,
+#pons {
+  margin: auto;
+  display: block;
+  animation-name: saltos;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  cursor: pointer;
+}
+
+@keyframes saltos {
+  0% {
+    transform: translateY(0) translateX(-100vh);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  10% {
+    transform: translateY(-30px) translateX(-90vh); /* Salto más alto */
+    opacity: 1;
+    visibility: visible;
+  }
+
+  20% {
+    transform: translateY(0px) translateX(-80vh);
+  }
+
+  30% {
+    transform: translateY(-30px) translateX(-70vh); /* Salto más alto */
+  }
+
+  40% {
+    transform: translateY(0px) translateX(-60vh);
+  }
+
+  50% {
+    transform: translateY(-30px) translateX(-50vh); /* Salto más alto */
+  }
+
+  60% {
+    transform: translateY(0px) translateX(-40vh);
+  }
+
+  70% {
+    transform: translateY(-30px) translateX(-30vh); /* Salto más alto */
+  }
+
+  80% {
+    transform: translateY(0px) translateX(-20vh);
+  }
+
+  90% {
+    transform: translateY(-30px) translateX(-10vh); /* Salto más alto */
+  }
+
+  100% {
+    transform: translateY(0px) translateX(0vh);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.trueda {
+  display: block;
+  position: absolute;
+  left: -100px;
+  animation-name: rueda;
+  animation-duration: 10s;
+  animation-fill-mode: forwards;
+}
+@keyframes rueda {
+  0% {
+    left: -100px; /* Fuera de la pantalla */
+    transform: rotate(0deg) scale(0.5);
+  }
+  100% {
+    left: 40%; /* Centrado horizontalmente */
+    opacity: 1;
+    visibility: visible;
+    transform: rotate(360deg) scale(1);
+    cursor: pointer;
+  }
+}
+
+#corazon {
+  display: block;
+  animation: pulse 6s infinite ease-in;
+  position: relative;
+  opacity: 0;
+  animation-delay: 10s;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    left: 50%;
+  }
+  10% {
+    opacity: 0.2;
+    transform: scale(0.8);
+    left: 50%;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.2);
+    left: 50%;
+  }
+}
+
+#mensaje {
+  font-size: 20px;
+  opacity: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #b73d32;
+  border: 5px #e5d3c3;
+  margin: auto;
+  max-width: 300px;
+  padding: 5vh;
+  text-align: center;
+  border-style: dotted;
+  animation-name: show;
+  animation-duration: 20s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#mensaje:hover {
+  animation-name: parpadear;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  text-decoration: dashed;
+}
+
+@keyframes parpadear {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.bolaMundo {
+  margin-top: 50px;
+}

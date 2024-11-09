@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consultas</title>
+    <link rel="shortcut icon" href="img/pregunta.png" />
+    <link rel="stylesheet" href="consulta.css" />
+  </head>
+  <body>
+    <h1>Foro de consultas</h1>
+    <nav class="navegador" id="navegador">
+      <a href="subtitulacion\subtitulado.html">Subtitulación</a>
+      <br />
+      <a href="ta/ta.html">TA</a>
+      <br />
+      <a href="tautomatica/tautomatica.html">Traducción Automática</a>
+      <br />
+      <a href="doblaje/doblaje.html">Doblaje</a>
+      <br />
+      <a href="documentos/documentos.html">Documentos</a>
+      <br />
+      <a href="Practica_2.html">Volver</a>
+    </nav>
+    <p>
+      En este apartado puedes escribir todas las dudas o consultas que tengas...
+      <span>¡No te quedes con ellas!</span>
+    </p>
+    <br />
+
+    <form id="formulario" class="formulario">
+      <div class="forodudas">
+        <input
+          type="text"
+          name="nombre"
+          id="usuarioNombre"
+          placeholder="Escribe un nombre..."
+          required
+        />
+        <br />
+        <textarea
+          name="mensajeEntrada"
+          id="mensajeEntrada"
+          placeholder="Escribe un mensaje aquí"
+          required
+        ></textarea>
+      </div>
+      <div class="boton">
+        <input type="submit" value="Enviar" class="miboton" id="miboton" />
+      </div>
+    </form>
+    <br />
+
+    <div class="buscar" id="buscar">
+      <br />
+      <input
+        type="text"
+        id="texto1"
+        class="texto1"
+        placeholder="¿De quién buscas la respuesta?"
+        name="nombreBuscar"
+      />
+      <button type="button" id="botonBuscar">Buscar</button>
+    </div>
+    <br />
+    <div class="textoinfo" id="textoinfo"></div>
+  </body>
+</html>
