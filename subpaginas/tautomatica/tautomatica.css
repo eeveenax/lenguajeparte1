@@ -1,24 +1,28 @@
+/* Establece que el contenedor body utilice flexbox con orientación de columna (vertical) */
 body {
   display: flex;
   flex-direction: column;
 }
 
-/*mover al centro*/
-
+/* Estilo para el menú de navegación */
 nav {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 10px;
-  background-color: #a0dada;
-  width: 90%;
+  background-color: rgba(149, 93, 69, 0.3);
+  width: auto;
   text-align: left;
   animation-name: slide-in;
   animation-duration: 3s;
   animation-fill-mode: forwards;
+  font-size: 20px;
+  gap: 20px;
+  font-family: "Times New Roman", Times, serif;
 }
 
+/* Animación para el efecto "slide-in" del menú */
 @keyframes slide-in {
   from {
     transform: translateX(-250px);
@@ -30,29 +34,35 @@ nav {
   }
 }
 
+/* Estilo para los enlaces dentro del menú */
 a {
   margin-right: 10px;
   text-decoration: none;
   font-family: Arial, sans-serif;
   font-size: 14px;
   color: black;
+  font-family: "Times New Roman", Times, serif;
 }
 
+/* Estilo para el contenedor de "Traductor Automático" */
 .tAutomatico {
   padding: 30px;
   margin: 0;
   background-color: rgb(164, 70, 30, 0.3);
 }
 
+/* Estilo para el título "Traductor Automático" */
 .tAutomaticoTitulo {
   text-align: center;
   font-family: "Times New Roman", Times, serif;
   color: #a4461e;
   animation-name: fadein;
   animation-duration: 5s;
-  animation-fill-mode: forwards;
+  animation-fill-mode: forwards; /* Mantener el estado final */
   height: 20px;
 }
+
+/* Animación de aparición gradual del título */
 @keyframes fadein {
   0% {
     opacity: 0;
@@ -60,12 +70,12 @@ a {
   50% {
     opacity: 0.5;
   }
-
   100% {
     opacity: 1;
   }
 }
 
+/* Estilo para los párrafos (texto) */
 p {
   margin: auto;
   text-align: justify;
@@ -73,6 +83,16 @@ p {
   padding: 3% 20% 3%;
 }
 
+/* Estilo para el subtítulo de los traductores automáticos */
+#traductoresAuto {
+  margin: auto;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  color: #b26521;
+  margin-top: 1vh;
+}
+
+/* Estilo para los contenedores de descripciones de cada traductor */
 #googleH,
 #deeplH,
 #ponsH {
@@ -86,6 +106,7 @@ p {
   animation-fill-mode: forwards;
 }
 
+/* Animación de aparición gradual para las descripciones */
 @keyframes show {
   0% {
     opacity: 0;
@@ -98,14 +119,7 @@ p {
   }
 }
 
-#traductoresAuto {
-  margin: auto;
-  text-align: center;
-  font-family: "Times New Roman", Times, serif;
-  color: #b26521;
-  margin-top: 1vh;
-}
-
+/* Estilo para las imágenes de los traductores */
 #google,
 #deepl,
 #pons {
@@ -117,105 +131,79 @@ p {
   cursor: pointer;
 }
 
+/* Animación para el efecto de "salto" de las imágenes */
 @keyframes saltos {
   0% {
-    transform: translateY(0) translateX(-100vh);
+    transform: translateY(0) translateX(-100vh); /* Comienza fuera de la pantalla */
     opacity: 0;
     visibility: hidden;
   }
-
   10% {
-    transform: translateY(-30px) translateX(-90vh); /* Salto más alto */
+    transform: translateY(-30px) translateX(-90vh); /* Salto hacia arriba */
     opacity: 1;
     visibility: visible;
   }
-
-  20% {
-    transform: translateY(0px) translateX(-80vh);
-  }
-
-  30% {
-    transform: translateY(-30px) translateX(-70vh); /* Salto más alto */
-  }
-
-  40% {
-    transform: translateY(0px) translateX(-60vh);
-  }
-
-  50% {
-    transform: translateY(-30px) translateX(-50vh); /* Salto más alto */
-  }
-
-  60% {
-    transform: translateY(0px) translateX(-40vh);
-  }
-
-  70% {
-    transform: translateY(-30px) translateX(-30vh); /* Salto más alto */
-  }
-
-  80% {
-    transform: translateY(0px) translateX(-20vh);
-  }
-
-  90% {
-    transform: translateY(-30px) translateX(-10vh); /* Salto más alto */
-  }
-
   100% {
-    transform: translateY(0px) translateX(0vh);
+    transform: translateY(0px) translateX(0vh); /* Llega a su posición final */
     opacity: 1;
     visibility: visible;
   }
 }
 
+/* Estilo para la bola que se mueve por la pantalla */
+.bolaMundo {
+  margin-top: 50px; /* Espaciado superior */
+}
+
+/* Animación para la rueda giratoria */
 .trueda {
-  display: block;
+  display: block; /* Mostrar como bloque */
   position: absolute;
-  left: -100px;
+  left: -100px; /* Comienza fuera de la pantalla */
   animation-name: rueda;
   animation-duration: 10s;
-  animation-fill-mode: forwards;
+  animation-fill-mode: forwards; /* Mantiene el estado final */
 }
+
+/* Animación de movimiento y rotación de la rueda */
 @keyframes rueda {
   0% {
-    left: -100px; /* Fuera de la pantalla */
-    transform: rotate(0deg) scale(0.5);
+    left: -100px; /* Empieza fuera de la pantalla */
+    transform: rotate(0deg) scale(0.5); /* Empieza pequeño y sin rotar */
   }
   100% {
-    left: 40%; /* Centrado horizontalmente */
+    left: 40%;
     opacity: 1;
     visibility: visible;
-    transform: rotate(360deg) scale(1);
-    cursor: pointer;
+    transform: rotate(360deg) scale(1); /* Rotación completa y tamaño normal */
+    cursor: pointer; /* El cursor cambia a mano */
   }
 }
 
+/* Estilo para el corazón (animación de pulso) */
 #corazon {
-  display: block;
-  animation: pulse 6s infinite ease-in;
-  position: relative;
+  display: block; /* Mostrar como bloque */
+  animation: pulse 6s infinite ease-in; /* Animación continua de pulso */
+  position: relative; /* Posición relativa */
   opacity: 0;
   animation-delay: 10s;
 }
 
+/* Animación de pulso para el corazón */
 @keyframes pulse {
   0% {
-    opacity: 0;
+    opacity: 0; /* Invisible al principio */
     visibility: hidden;
-    left: 50%;
-  }
-  10% {
-    opacity: 0.2;
-    transform: scale(0.8);
     left: 50%;
   }
   100% {
     opacity: 1;
-    transform: scale(1.2);
+    transform: scale(1.2); /* Crece el tamaño */
     left: 50%;
   }
 }
+
+/* Estilo y animación para el mensaje */
 
 #mensaje {
   font-size: 20px;
@@ -230,15 +218,13 @@ p {
   border-style: dotted;
   animation-name: show;
   animation-duration: 20s;
-  animation-delay: 0s;
   animation-fill-mode: forwards;
 }
 
+/* Animación de aparición gradual del mensaje */
+
 @keyframes show {
   0% {
-    opacity: 0;
-  }
-  50% {
     opacity: 0;
   }
   100% {
@@ -246,12 +232,16 @@ p {
   }
 }
 
+/* Animación de parpadeo del mensaje al pasar el ratón */
+
 #mensaje:hover {
-  animation-name: parpadear;
+  animation-name: parpadear; /* Animación de parpadeo */
   animation-duration: 2s;
   animation-iteration-count: infinite;
   text-decoration: dashed;
 }
+
+/* Animación de parpadeo del mensaje */
 
 @keyframes parpadear {
   0% {
@@ -263,8 +253,4 @@ p {
   100% {
     opacity: 1;
   }
-}
-
-.bolaMundo {
-  margin-top: 50px;
 }

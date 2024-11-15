@@ -1,47 +1,77 @@
 body {
-  position: flex;
+  display: flex;
   flex-direction: column;
 }
+
+/* El menú de navegación */
+
 nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  background-color: #a0dada;
-  width: 96%;
+  background-color: #8ec4df;
+  position: absolute;
+  width: 140px;
+  height: 250px;
+  padding-top: 20px;
+  padding-left: 10px;
   text-align: left;
   animation-name: slide-in;
+  opacity: 0;
   animation-duration: 3s;
   animation-fill-mode: forwards;
+  left: 0;
+  margin-top: 20vh;
+  font-family: "Times New Roman", Times, serif;
 }
+
+/* Animación para que el nav entre deslizándose desde la izquierda */
 
 @keyframes slide-in {
   from {
-    transform: translateX(-250px);
-    opacity: 0;
+    transform: translateX(-250px); /* Comienza desplazado hacia la izquierda */
+    opacity: 0; /* Comienza invisible */
   }
   to {
-    transform: translateX(0);
-    opacity: 0.9;
+    transform: translateX(0); /* Llega a su posición original */
+    opacity: 0.9; /* Se vuelve un poco más opaco */
   }
 }
 
-a {
-  margin-right: 10px;
-  text-decoration: none;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
+/* Estilos para los enlaces dentro del nav */
+
+nav a {
   color: black;
+  text-decoration: none;
+  display: block;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
 }
+
+/* Estilos para el título h1 */
 
 h1 {
   font-size: 6rem;
   font-family: "Open Sans", sans-serif;
   text-align: center;
-  max-width: 600px;
   margin: 0 auto;
 }
+
+/* Estilo responsive para pantallas medianas */
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 4rem; /* Reducir el tamaño en pantallas más pequeñas */
+  }
+}
+
+/* Estilo responsive para pantallas pequeñas */
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 3rem; /* Reducir aún más el tamaño en pantallas muy pequeñas */
+  }
+}
+
+/* Estilo para un span dentro de h1 para un efecto de gradiente */
+
 h1 span {
   background: radial-gradient(93% 83.5% at bottom, #2e3dc7 79.5%, #0000 80%)
       no-repeat,
@@ -52,14 +82,19 @@ h1 span {
     radial-gradient(93% 83.5% at top, #0000 79.5%, #91fff6 80%) no-repeat,
     radial-gradient(93% 83.5% at bottom, #91fff6 79.5%, #0000 80%) no-repeat,
     radial-gradient(93% 83.5% at top, #0000 79.5%, #91fff6 80%) no-repeat;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: #0000;
-  -webkit-text-stroke: 0.2rem #2e3dc7;
+  /* Usando gradientes radiales para crear efectos visuales en el texto */
+
+  -webkit-background-clip: text; /* Clipping del fondo solo sobre el texto */
+  background-clip: text; /* Para Firefox, el mismo efecto */
+  color: #0000; /* Texto transparente */
+  -webkit-text-stroke: 0.2rem #2e3dc7; /* Agrega un borde a las letras */
   -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
-  animation: first 2s infinite alternate, second 3s infinite linear;
+  box-decoration-break: clone; /* Rompe el contorno del texto para una mejor visualización */
+  animation: first 2s infinite alternate, second 3s infinite linear; /* Animaciones para los gradientes */
 }
+
+/* Animación de desplazamiento para el texto del h1 */
+
 @keyframes first {
   0% {
     background-position: -200% 100%, -100% 100%, 0% 100%, 100% 100%, 0% 100%,
@@ -70,6 +105,9 @@ h1 span {
       -100% 100%, 0% 100%, 100% 100%;
   }
 }
+
+/* Otra animación para cambiar el tamaño del fondo gradiente */
+
 @keyframes second {
   0% {
     background-size: 50.5% 60%, 50.5% 60%, 50.5% 60%, 50.5% 60%, 50.5% 90%,
@@ -89,32 +127,50 @@ h1 span {
   }
 }
 
+/* Diseño de los documentos con flexbox */
+
 .documento1,
 .documento2 {
-  margin: 12vh auto;
+  display: flex; /* Usamos flexbox para centrar los elementos */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 8vh auto; /* Margen de 12vh desde el top, centrado horizontalmente */
   width: 400px;
-  text-align: center;
+  text-align: center; /* Alineación del texto al centro */
   background-color: #74c2ef;
   padding: 1cm;
 }
 
+/* Estilos de la información dentro de los documentos */
+
 .documentoInfo {
+  font-family: "Times New Roman", Times, serif;
   color: black;
 }
 
-.btn {
-  display: inline-block;
+/* Botones dentro de los documentos */
+
+.documento1 .btn,
+.documento2 .btn {
+  display: block;
   background-color: #2e3dc7;
   padding: 15px 25px;
   color: white;
-  text-decoration: none;
+  text-decoration: none; /* Quitar subrayado */
   border-radius: 5px;
+  margin-top: 30px;
+  width: 200px;
 }
 
+/* Estilos cuando el botón se pasa por encima */
+
 .btn:hover {
-  background-color: rgb(200, 101, 213);
-  box-shadow: 10px 10px rgb(139, 52, 116);
+  background-color: rgb(200, 101, 213); /* Cambio de color en hover */
+  box-shadow: 10px 10px rgb(139, 52, 116); /* Sombra al pasar el ratón */
 }
+
+/* Estilo para una imagen (dragón) que se ajusta al 100% del contenedor */
 
 .dragon {
   width: 100%;

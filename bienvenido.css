@@ -1,217 +1,222 @@
+/* Importa la fuente 'Inter' desde Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap");
 
+/* Definición de variables para colores y estilos globales */
 :root {
-  --bg: black;
-  --clr-1: #00c2ff;
-  --clr-2: #33ff8c;
-  --clr-3: #ffc640;
-  --clr-4: #e54cff;
+  /* Colores principales del sitio */
+  --bg: black; /* Fondo de la página */
+  --clr-1: #00c2ff; /* Color 1*/
+  --clr-2: #33ff8c; /* Color 2*/
+  --clr-3: #ffc640; /* Color 3*/
+  --clr-4: #e54cff; /* Color 4*/
 
-  --blur: 1rem;
-  --fs: clamp(3rem, 8vw, 7rem);
-  --ls: clamp(-1.75px, -0.25vw, -3.5px);
+  /* Propiedades de estilo que se usan en el diseño */
+  --blur: 1rem; /* Desenfoque aplicado en las auroras */
+  --fs: clamp(
+    3rem,
+    8vw,
+    7rem
+  ); /* Tamaño de fuente adaptable, que depende del ancho de la pantalla */
+  --ls: clamp(-1.75px, -0.25vw, -3.5px); /* Espaciado de letras adaptable */
 }
 
+/* Estilo base para el cuerpo del documento */
 body {
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-  background-color: var(--bg);
-  color: #fff;
-  font-family: "Inter", "DM Sans", Arial, sans-serif;
+  min-height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
+  display: grid; /* Utiliza CSS Grid para alinear el contenido */
+  place-items: center; /* Centra el contenido tanto vertical como horizontalmente */
+  background-color: var(--bg); /* Fondo negro (definido en las variables) */
+  color: #fff; /* Texto blanco */
+  font-family: "Inter", "DM Sans", Arial, sans-serif; /* Fuentes "Inter" */
 }
+
+/* Estilos globales para que todos los elementos hereden la misma fuente y caja de modelo */
 
 *,
-*::before,
+*::before, /*Pseudo-elemeto que inserta contenido antes del contenido del elemento */
 *::after {
-  font-family: inherit;
-  box-sizing: border-box;
+  font-family: inherit; /* Todos los elementos heredan la fuente definida */
+  box-sizing: border-box; /* El tamaño total de los elementos incluye padding y border */
 }
 
+/* Estilo de la sección que contiene el contenido principal */
 .content {
-  text-align: center;
-  animation-name: fade-out;
-  animation-duration: 2.5s;
+  text-align: center; /* Centra el texto dentro del contenedor */
+  animation-name: fade-out; /* Aplica la animación fade-out */
+  animation-duration: 4.5s; /* Duración de la animación de desvanecimiento */
 }
 @keyframes fade-out {
   0% {
-    opacity: 1;
+    opacity: 1; /* Comienza completamente visible */
   }
   50% {
-    opacity: 0.5;
+    opacity: 0.5; /* A los 50% se desvanece a la mitad */
   }
   100% {
-    opacity: 0;
+    opacity: 0; /* Al final de la animación, el elemento es completamente invisible */
   }
 }
 
+/* Estilo del título principal */
 .title {
-  font-size: var(--fs);
-  font-weight: 800;
-  letter-spacing: var(--ls);
-  position: relative;
-  overflow: hidden;
-  background: var(--bg);
-  margin: 0;
+  font-size: var(
+    --fs
+  ); /* Tamaño de fuente dinámico definido en las variables */
+  font-weight: 800; /* Peso de la fuente (negrita) */
+  letter-spacing: var(--ls); /* Espaciado de letras dinámico */
+  position: relative; /* Se usa para posicionar elementos internos de forma absoluta */
+  overflow: hidden; /* Esconde cualquier contenido fuera de los límites */
+  background: var(--bg); /* Fondo negro */
+  margin: 0; /* Elimina los márgenes */
 }
 
+/* Estilo para el contenedor de la aurora */
 .aurora {
-  position: absolute;
+  position: absolute; /* Posición absoluta para que ocupe todo el espacio disponible */
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  mix-blend-mode: darken;
-  pointer-events: none;
+  width: 100%; /* Cubre todo el contenedor */
+  height: 100%; /* Cubre todo el contenedor */
+  z-index: 2; /* Asegura que se ubique encima del contenido */
+  mix-blend-mode: darken; /* Mezcla el color de la aurora con el fondo */
+  pointer-events: none; /* Desactiva la interacción con el mouse sobre este elemento */
 }
 
+/* Estilo de los elementos individuales de la aurora */
 .aurora__item {
-  overflow: hidden;
-  position: absolute;
-  width: 60vw;
-  height: 60vw;
-  background-color: var(--clr-1);
-  border-radius: 37% 29% 27% 27% / 28% 25% 41% 37%;
-  filter: blur(var(--blur));
-  mix-blend-mode: overlay;
+  overflow: hidden; /* Oculta cualquier cosa que sobresalga del área de cada item */
+  position: absolute; /* Posición absoluta dentro de su contenedor */
+  width: 60vw; /* Tamaño del elemento (60% del ancho de la ventana) */
+  height: 60vw; /* Tamaño del elemento (60% del ancho de la ventana) */
+  background-color: var(
+    --clr-1
+  ); /* Color del elemento, se cambia en cada aurora */
+  border-radius: 37% 29% 27% 27% / 28% 25% 41% 37%; /* Forma ovalada que cambia durante la animación */
+  filter: blur(var(--blur)); /* Aplica un desenfoque dinámico */
+  mix-blend-mode: overlay; /* Aplica una mezcla de colores */
 }
 
+/* Animaciones específicas para cada elemento de la aurora */
 .aurora__item:nth-of-type(1) {
-  top: -50%;
-  animation: aurora-border 6s ease-in-out infinite,
-    aurora-1 12s ease-in-out infinite alternate;
+  top: -50%; /* Inicializa fuera de la pantalla */
+  animation: aurora-border 6s ease-in-out, aurora-1 14s ease-in-out;
 }
 
 .aurora__item:nth-of-type(2) {
-  background-color: var(--clr-3);
+  background-color: var(--clr-3); /* Cambia el color */
   right: 0;
   top: 0;
-  animation: aurora-border 6s ease-in-out infinite,
-    aurora-2 12s ease-in-out infinite alternate;
+  animation: aurora-border 6s ease-in-out, aurora-2 14s ease-in-out;
 }
 
 .aurora__item:nth-of-type(3) {
-  background-color: var(--clr-2);
+  background-color: var(--clr-2); /* Cambia el color */
   left: 0;
   bottom: 0;
-  animation: aurora-border 6s ease-in-out infinite,
-    aurora-3 8s ease-in-out infinite alternate;
+  animation: aurora-border 6s ease-in-out, aurora-3 10s ease-in-out;
 }
 
 .aurora__item:nth-of-type(4) {
-  background-color: var(--clr-4);
+  background-color: var(--clr-4); /* Cambia el color */
   right: 0;
-  bottom: -50%;
-  animation: aurora-border 6s ease-in-out infinite,
-    aurora-4 24s ease-in-out infinite alternate;
+  bottom: -50%; /* Inicializa fuera de la pantalla */
+  animation: aurora-border 8s ease-in-out, aurora-4 20s ease-in-out;
 }
 
+/* Animaciones de movimiento para las auroras */
 @keyframes aurora-1 {
   0% {
     top: 0;
     right: 0;
   }
-
   50% {
     top: 100%;
     right: 75%;
   }
-
   75% {
     top: 100%;
     right: 25%;
   }
-
   100% {
     top: 0;
     right: 0;
   }
 }
 
+/* Animación para la aurora 2 */
 @keyframes aurora-2 {
   0% {
     top: -50%;
     left: 0%;
   }
-
   60% {
     top: 100%;
     left: 75%;
   }
-
   85% {
     top: 100%;
     left: 25%;
   }
-
   100% {
     top: -50%;
     left: 0%;
   }
 }
 
+/* Animación para la aurora 3 */
 @keyframes aurora-3 {
   0% {
     bottom: 0;
     left: 0;
   }
-
   40% {
     bottom: 100%;
     left: 75%;
   }
-
   65% {
     bottom: 40%;
     left: 50%;
   }
-
   100% {
     bottom: 0;
     left: 0;
   }
 }
 
+/* Animación para la aurora 4 */
 @keyframes aurora-4 {
   0% {
     bottom: -50%;
     right: 0;
   }
-
   50% {
     bottom: 0%;
     right: 40%;
   }
-
   90% {
     bottom: 50%;
     right: 25%;
   }
-
   100% {
     bottom: -50%;
     right: 0;
   }
 }
 
+/* Animación para cambiar el borde de las auroras */
 @keyframes aurora-border {
   0% {
     border-radius: 37% 29% 27% 27% / 28% 25% 41% 37%;
   }
-
   25% {
     border-radius: 47% 29% 39% 49% / 61% 19% 66% 26%;
   }
-
   50% {
     border-radius: 57% 23% 47% 72% / 63% 17% 66% 33%;
   }
-
   75% {
     border-radius: 28% 49% 29% 100% / 93% 20% 64% 25%;
   }
-
   100% {
     border-radius: 37% 29% 27% 27% / 28% 25% 41% 37%;
   }

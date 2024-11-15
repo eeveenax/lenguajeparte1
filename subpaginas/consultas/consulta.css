@@ -1,12 +1,15 @@
+/* Estilo general del body */
 body {
   display: flex;
   flex-direction: column;
-  background-image: url(img/pregunta.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url(img/pregunta.jpg); /* Se aplica una imagen de fondo (ajústala a la ruta de tu imagen) */
+  background-repeat: no-repeat; /* Se evita que la imagen de fondo se repita */
+  background-size: cover; /* La imagen de fondo cubre todo el área visible */
   text-align: center;
   align-items: center;
 }
+
+/* Estilo para la barra de navegación */
 
 nav {
   display: flex;
@@ -14,13 +17,20 @@ nav {
   justify-content: center;
   align-items: center;
   padding: 10px;
-  background-color: #a0dada;
+  background-color: rgb(215, 156, 231);
+
   width: 96%;
   text-align: left;
+  flex-wrap: wrap;
+  gap: 2px;
   animation-name: slide-in;
   animation-duration: 3s;
   animation-fill-mode: forwards;
+  font-size: 20px;
+  gap: 20px;
 }
+
+/* Animación para el efecto de entrada del nav */
 
 @keyframes slide-in {
   from {
@@ -33,6 +43,8 @@ nav {
   }
 }
 
+/* Estilo para los enlaces dentro de la barra de navegación */
+
 a {
   margin-right: 10px;
   text-decoration: none;
@@ -41,14 +53,18 @@ a {
   color: black;
 }
 
+/* Estilo para el título h1 */
+
 h1 {
   text-align: center;
   color: rgb(181, 60, 215);
-  animation-name: blur;
+  animation-name: blur; /* Aplica la animación "blur" al título */
   animation-duration: 4s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in;
 }
+
+/* Animación de desvanecimiento (blur) para el título h1 */
 
 @keyframes blur {
   0% {
@@ -59,6 +75,8 @@ h1 {
   }
 }
 
+/* Estilo para los párrafos */
+
 p {
   text-align: center;
   font-size: 18px;
@@ -67,45 +85,36 @@ p {
   color: black;
 }
 
+/* Estilo para los elementos con la etiqueta span */
+
 span {
-  color: dark rgb(131, 40, 72);
-  text-decoration: underline;
-  font-weight: bold;
+  color: dark rgb(131, 40, 72); /* Establece un color morado oscuro para el texto dentro de los <span> */
+  text-decoration: underline; /* Subraya el texto dentro de los <span> */
+  font-weight: bold; /* Establece un peso de fuente negrita */
 }
+
+/* Efecto hover para los elementos con la etiqueta span */
 
 span:hover {
   color: rgb(200, 48, 157);
 }
 
-.miboton {
-  display: inline-block;
-  justify-content: center;
-  align-items: center;
-  height: 30px;
-  width: 70px;
-  font-size: 10px;
-  border: none;
-  color: white;
-  cursor: pointer;
-  border-radius: 20px;
-  box-shadow: rgb(79, 19, 96);
-  background-color: rgb(181, 60, 215);
-  transition: box-shadow 0.3s ease-in-out;
-}
-.miboton:hover {
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Aumenta el desplazamiento y la opacidad de la sombra */
-}
+/* Estilo para el campo de texto con el id "usuarioNombre" */
 
 #usuarioNombre {
   padding: 2px;
   margin-bottom: 0.5cm;
 }
 
+/* Estilo para el campo de mensaje con el id "mensajeEntrada" */
+
 #mensajeEntrada {
   height: 8cm;
   width: 10cm;
   font-size: 16px;
 }
+
+/* Estilo para el campo de texto con el id "texto1" */
 
 #texto1 {
   font-family: "Times New Roman", Times, serif;
@@ -115,14 +124,19 @@ span:hover {
   border: 8px solid rgb(219, 103, 225);
 }
 
+/* Estilo para el contenedor de texto con la clase "textoinfo" */
+
 .textoinfo {
   display: flex;
   flex-direction: column;
   width: 10cm;
   height: 100%;
   font-family: "Times New Roman", Times, serif;
-  background-color: rgb(246, 174, 244);
-  display: flex;
+  background-color: rgb(
+    246,
+    174,
+    244
+  ); /* Color de fondo suave para el contenedor */
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -130,78 +144,29 @@ span:hover {
   color: black;
 }
 
-#botonBuscar {
-  display: inline-block;
+/* Estilo para los botones con la clase "miboton" */
+
+.miboton {
+  display: inline-block; /* Hace que el botón sea un bloque en línea */
   justify-content: center;
   align-items: center;
-  width: 100px;
   height: 30px;
+  width: 70px;
+  font-size: 14px;
   border: none;
-  outline: none;
-  cursor: pointer;
-  position: relative;
-  border-radius: 10px;
-  margin-bottom: -40vh;
   color: white;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: rgb(
+    79,
+    19,
+    96
+  ); /* Sombra en el botón (aunque no es visible sin más propiedades) */
   background-color: rgb(181, 60, 215);
+  transition: box-shadow 0.3s ease-in-out;
 }
 
-#botonBuscar:before {
-  content: "";
-  background: linear-gradient(
-    45deg,
-    #ff0000,
-    #ff7300,
-    #fffb00,
-    #48ff00,
-    #00ffd5,
-    #002bff,
-    #7a00ff,
-    #ff00c8,
-    #ff0000
-  );
-  position: absolute;
-  z-index: -1;
-  top: -2px;
-  left: -2px;
-  background-size: 400%;
-  filter: blur(5px);
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  animation: glowing 20s linear infinite;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-  border-radius: 10px;
-}
-
-#botonBuscar:active {
-  color: #000;
-}
-
-#botonBuscar:hover:before {
-  opacity: 1;
-}
-
-#botonBuscar:after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  border-radius: 10px;
-}
-
-@keyframes glowing {
-  0% {
-    background-position: 0 0;
-  }
-  50% {
-    background-position: 400% 0;
-  }
-  100% {
-    background-position: 0 0;
-  }
+/* Efecto hover para el botón */
+.miboton:hover {
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
 }
