@@ -7,57 +7,7 @@ body {
   align-items: center;
 }
 
-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 20px;
-  background-color: #d8b5a4;
-  width: 90%;
-  text-align: left;
-  animation-name: slide-in;
-  animation-duration: 3s;
-  animation-fill-mode: forwards;
-  gap: 20px;
-}
-
-@keyframes slide-in {
-  from {
-    transform: translateX(-250px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 0.9;
-  }
-}
-
-a {
-  margin-right: 10px;
-  text-decoration: none;
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  color: black;
-}
-
-h1 {
-  padding-top: 50px;
-  animation-name: fadeIn;
-  animation-duration: 4s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+/*Efecot oleaje*/
 
 .container {
   height: 100px;
@@ -176,6 +126,62 @@ h1 {
   margin: auto;
 }
 
+/* Navegador*/
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: #d8b5a4;
+  width: 90%;
+  text-align: left;
+  animation-name: slide-in;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  gap: 20px;
+  border-radius: 20px;
+}
+
+/*Efecto para que aparezca el menú*/
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-250px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 0.9;
+  }
+}
+
+a {
+  margin-right: 10px;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: black;
+}
+
+h1 {
+  padding-top: 50px;
+  animation-name: fadeIn;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .doblajeTitulo {
   font-size: 50px;
   margin: auto;
@@ -195,15 +201,15 @@ p {
   padding: 1% 20% 3%;
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
-  cursor: pointer;
+  margin-top: 50px;
 }
 
 #video1,
 #video2 {
-  text-align: left;
+  margin: 40px;
   font-family: Arial Black;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 30px;
   text-align: center;
   background: #202020;
   -webkit-background-clip: text;
@@ -224,7 +230,9 @@ p {
 }
 
 .video {
-  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
+  width: 900px;
 
   /*Animación del vídeo del vídeo */
 
@@ -248,6 +256,54 @@ p {
   to {
     opacity: 1;
     scale: 100%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .videoDoblaje {
+    /*Disposición del vídeo */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .video {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    max-width: 500px;
+    /*Animación del vídeo del vídeo */
+
+    view-timeline-name: --video;
+    view-timeline-axis: block;
+
+    animation-timeline: --video;
+    animation-name: show;
+
+    /*Permite que el usuario vea el vídeo cuando entra al 25% en pantalla*/
+
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
+  }
+
+  @keyframes show {
+    from {
+      opacity: 0;
+      scale: 25%;
+    }
+    to {
+      opacity: 1;
+      scale: 100%;
+    }
+  }
+  p {
+    text-align: justify;
+    padding: 1% 5% 3%;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 50px;
   }
 }
 
