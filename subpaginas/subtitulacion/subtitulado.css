@@ -132,6 +132,20 @@ h2:hover {
   font-family: "Times New Roman", Times, serif;
 }
 
+/*Animacion de la imagen de vanelope*/
+
+#vanelopesub {
+  border-radius: 20px;
+  background-color: #79166f;
+  transition: transform 1s ease-in;
+  transform-origin: top left; /* Cambia el origen de transformación a la esquina superior izquierda */
+}
+#vanelopesub:hover {
+  transform: rotate(
+    40deg
+  ); /* Rota 45 grados desde la esquina superior izquierda */
+}
+
 /* Estilo para los videos */
 
 video {
