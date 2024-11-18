@@ -132,7 +132,7 @@ nav a {
   padding: 10px 15px;
   display: block;
   font-family: "Times New Roman", Times, serif;
-  font-size: 16px;
+  font-size: 18px;
   color: black;
 }
 
@@ -449,7 +449,7 @@ h1 {
 .procesos .proceso3 .imagen3 {
   position: relative;
   width: 260px;
-  height: 250px;
+  height: 300px;
   top: -40%;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -471,10 +471,15 @@ h1 {
   padding: 10px 15px;
   color: #111;
   text-align: center;
-
   visibility: hidden;
   opacity: 0;
   transition: 0.3s ease-in-out;
+}
+
+.procesos .proceso1 .proceso1Texto p,
+.procesos .proceso2 .proceso2Texto p,
+.procesos .proceso3 .proceso3Texto p {
+  text-align: justify;
 }
 
 .procesos .proceso1:hover .proceso1Texto,
