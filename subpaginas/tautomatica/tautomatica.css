@@ -39,7 +39,7 @@ a {
   margin-right: 10px;
   text-decoration: none;
   font-family: Arial, sans-serif;
-  font-size: 14px;
+  font-size: 18px;
   color: black;
   font-family: "Times New Roman", Times, serif;
 }
@@ -96,13 +96,14 @@ p {
 #googleH,
 #deeplH,
 #ponsH {
+  opacity: 0;
   margin: auto;
   text-align: justify;
   font-family: "Times New Roman", Times, serif;
   padding: 3% 20% 3%;
   animation-name: show;
   animation-duration: 5s;
-  animation-delay: 0s;
+  animation-delay: 3s;
   animation-fill-mode: forwards;
 }
 
@@ -126,7 +127,7 @@ p {
   margin: auto;
   display: block;
   animation-name: saltos;
-  animation-duration: 2s;
+  animation-duration: 3s;
   animation-timing-function: ease-out;
   cursor: pointer;
 }

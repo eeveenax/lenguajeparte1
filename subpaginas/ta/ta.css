@@ -23,7 +23,7 @@ nav {
   animation-duration: 3s;
   animation-fill-mode: forwards;
   left: 0;
-  margin-top: 20vh;
+  margin-top: 22vh;
   font-family: "Times New Roman", Times, serif;
 }
 
@@ -49,6 +49,7 @@ nav a {
   font-family: Arial, sans-serif;
   font-size: 16px;
   font-family: "Times New Roman", Times, serif;
+  margin-top: 10px;
 }
 
 /* Estilo del banner superior */

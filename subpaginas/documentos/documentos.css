@@ -9,7 +9,7 @@ nav {
   background-color: #8ec4df;
   position: absolute;
   width: 140px;
-  height: 250px;
+  height: 210px;
   padding-top: 20px;
   padding-left: 10px;
   text-align: left;
@@ -43,6 +43,7 @@ nav a {
   display: block;
   font-family: "Times New Roman", Times, serif;
   font-size: 16px;
+  margin-top: 10px;
 }
 
 /* Estilos para el título h1 */

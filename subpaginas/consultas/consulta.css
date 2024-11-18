@@ -18,7 +18,6 @@ nav {
   align-items: center;
   padding: 10px;
   background-color: rgb(215, 156, 231);
-
   width: 96%;
   text-align: left;
   flex-wrap: wrap;
@@ -48,14 +47,15 @@ nav {
 a {
   margin-right: 10px;
   text-decoration: none;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 16px;
   color: black;
 }
 
 /* Estilo para el título h1 */
 
 h1 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-align: center;
   color: rgb(181, 60, 215);
   animation-name: blur; /* Aplica la animación "blur" al título */

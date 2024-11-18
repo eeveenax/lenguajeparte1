@@ -13,8 +13,7 @@ nav {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 2px;
-  padding: 10px;
+  padding: 20px;
   background-color: #d8b5a4;
   width: 90%;
   text-align: left;
@@ -39,7 +38,7 @@ a {
   margin-right: 10px;
   text-decoration: none;
   font-family: Arial, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   color: black;
 }
 

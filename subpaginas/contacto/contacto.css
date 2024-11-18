@@ -14,6 +14,12 @@ body {
   color: rgb(80, 30, 67);
 }
 
+h1,
+p,
+a {
+  font-family: "Times New Roman", Times, serif;
+}
+
 /* Estilo para los títulos h1 */
 
 h1 {
@@ -31,6 +37,7 @@ h1:hover {
   background-color: rgb(216, 128, 157);
   padding: 20px;
   cursor: pointer;
+  font-family: "Times New Roman", Times, serif;
 }
 
 /* Estilo para el contenedor de botones */
@@ -39,65 +46,6 @@ h1:hover {
   align-items: center;
   text-align: center;
   justify-content: center;
-}
-
-/* Estilo del elemento "bocadillo" (puede ser una burbuja de texto) */
-
-.bocadillo {
-  padding: 20px 40px 26px;
-  width: 40px;
-  height: 20px;
-  border-radius: 60%;
-  border: 3px;
-  background-color: rgb(203, 133, 193);
-  margin: auto;
-  animation-delay: 10s;
-  animation-name: fadeIn;
-  animation-duration: 5s;
-  animation-fill-mode: forwards;
-  cursor: pointer;
-  opacity: 0;
-}
-
-/* Definición de la animación "fadeIn" */
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-/* Estilo para la clase "fotoEmail" */
-
-.fotoEmail {
-  align-items: center;
-  margin: 1px 0 0 12px;
-}
-
-/* Estilo para la imagen "fotoYo" */
-
-.fotoYo {
-  animation-delay: 0s;
-  animation-duration: 10s;
-  animation-name: slidein; /* Aplica la animación "slidein" (desplazamiento lateral) */
-  margin: -20px -40px 0 -48px;
-  animation-fill-mode: forwards;
-}
-
-/* Definición de la animación "slidein" */
-
-@keyframes slidein {
-  0% {
-    margin-left: -650%;
-    width: 140px;
-  }
-  100% {
-    margin-left: -42px;
-    width: 140px;
-  }
 }
 
 /* Estilo para los párrafos <p> */
@@ -133,6 +81,64 @@ p {
   box-shadow: inset 400px 50px 0 0 #d80286;
 }
 
+/* Estilo para la clase "fotoEmail" */
+
+.fotoEmail {
+  align-items: center;
+  margin: 1px 0 0 12px;
+}
+
+/* Estilo para la imagen "fotoYo" */
+
+.fotoYo {
+  animation-duration: 5s;
+  animation-name: slidein; /* Aplica la animación "slidein" (desplazamiento lateral) */
+  margin: -20px -40px 0 -48px;
+  animation-fill-mode: forwards;
+}
+
+/* Estilo del elemento "bocadillo" (puede ser una burbuja de texto) */
+
+.bocadillo {
+  padding: 20px 40px 26px;
+  width: 40px;
+  height: 20px;
+  border-radius: 60%;
+  border: 3px;
+  background-color: rgb(203, 133, 193);
+  margin: auto;
+  animation-delay: 5s;
+  animation-name: fadeIn;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+  opacity: 0;
+}
+
+/* Definición de la animación "fadeIn" */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Definición de la animación "slidein" */
+
+@keyframes slidein {
+  0% {
+    margin-left: -650%;
+    width: 140px;
+  }
+  100% {
+    margin-left: -42px;
+    width: 140px;
+  }
+}
+
 /* Estilo para los elementos con la clase "eve" */
 
 .eve {
@@ -140,7 +146,24 @@ p {
   text-align: center;
   text-decoration: none;
   color: rgb(174, 19, 114);
+}
+
+#eve {
   animation-name: fadein;
+  animation-duration: 2s; /* Solo el tiempo */
+  animation-timing-function: ease-in; /* La función de animación se declara aquí */
+  animation-delay: 3s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* Estilo para el hover de los elementos con la clase "eve" */

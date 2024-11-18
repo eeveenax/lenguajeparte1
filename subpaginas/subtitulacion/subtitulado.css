@@ -25,6 +25,15 @@ nav {
   animation-fill-mode: forwards;
 }
 
+/* Estilos para los enlaces dentro de la barra de navegación */
+
+nav a {
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  font-family: "Times New Roman", Times, serif;
+}
+
 /* Animación para la barra de navegación */
 
 @keyframes slide-in {
@@ -36,16 +45,6 @@ nav {
     transform: translateX(0);
     opacity: 0.9;
   }
-}
-
-/* Estilos para los enlaces dentro de la barra de navegación */
-
-a {
-  margin-right: 10px;
-  text-decoration: none;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  color: black;
 }
 
 /* Estilo para el título principal */
@@ -173,22 +172,6 @@ video {
   }
 }
 
-/* Estilo para el contenedor de información (#info) */
-
-#info {
-  background-color: #e38a8a;
-  padding: 30px;
-  position: absolute; /* Posicionamiento absoluto para estar encima de otros elementos */
-  top: 100px;
-  left: 50%;
-  z-index: 2; /* Asegura que esté por encima de otros elementos */
-  text-align: center;
-  margin-right: 40vh;
-  margin-top: -10vh;
-  width: 30%;
-  max-width: 250px;
-}
-
 /* Estilo para el contenedor general .ejemplo2 */
 
 .ejemplo2 {
@@ -236,7 +219,7 @@ video {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  background-color: rgb(236, 157, 203);
+  background-color: rgb(212, 85, 159);
 }
 /* Asegura que las imágenes ocupen toda la celda */
 .caja img {
@@ -340,7 +323,7 @@ video {
   font-size: 30px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .parrafo1,
   .parrafo2,
   .parrafo3,
@@ -352,7 +335,7 @@ video {
 
   .parrafo1 {
     font-size: 16px;
-    bottom: 20%; /* Ajusta la posición */
+    bottom: 10%; /* Ajusta la posición */
   }
 
   .parrafo2 {
