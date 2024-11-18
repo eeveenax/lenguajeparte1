@@ -1,3 +1,11 @@
+@import url(https://fonts.googleapis.com/css?family=Righteous);
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+
+*,
+*:before,
+*:after {
+  position: relative;
+}
 body {
   background-color: #f4e0da;
   height: auto;
@@ -183,13 +191,18 @@ h1 {
 }
 
 .doblajeTitulo {
-  font-size: 50px;
+  font-size: 80px;
   margin: auto;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   color: #852525;
   -webkit-transition: 1s linear;
   transition: 1s linear;
+  text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa,
+    0 5px 0 #acacac, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2),
+    0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
+    0 20px 20px rgba(0, 0, 0, 0.15);
 }
 .doblajeTitulo:hover {
   -webkit-transform: perspective(150px) rotateX(45deg);
@@ -209,7 +222,7 @@ p {
   margin: 40px;
   font-family: Arial Black;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 40px;
   text-align: center;
   background: #202020;
   -webkit-background-clip: text;
@@ -226,7 +239,6 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
 }
 
 .video {
@@ -307,20 +319,24 @@ p {
   }
 }
 
+/*Texto y enlace*/
+
 .doblar {
-  margin-top: 100px;
+  flex-wrap: wrap;
+  margin-top: 120px;
   text-align: center;
   color: #6a3120;
   text-decoration: none;
+  -webkit-text-stroke-width: 2px;
+  font-size: 40px;
 }
 
 .doblar a {
   text-decoration: none;
+  font-size: 30px;
 }
 
-.dobladores {
-  text-align: center;
-}
+/* Dobladores y efectos */
 
 .dobladores {
   display: flex;
@@ -328,6 +344,27 @@ p {
   justify-content: center;
   align-items: center;
   width: 100px;
+  margin-top: -40px;
+}
+
+.dobladoresTituloH,
+.dobladoresTituloM {
+  margin: 60px;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #852525;
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+  text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa,
+    0 5px 0 #acacac, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2),
+    0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
+    0 20px 20px rgba(0, 0, 0, 0.15);
+}
+
+.dobladoresTituloH {
+  width: 400px;
+  margin-left: 120px;
 }
 
 .tarjetas {
@@ -413,7 +450,6 @@ p {
   font-size: 16px;
   font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
-  cursor: pointer;
 }
 .frontal1 .contenido1 hr {
   display: block;
