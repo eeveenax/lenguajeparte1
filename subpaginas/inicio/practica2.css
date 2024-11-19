@@ -1,5 +1,5 @@
 /* Importación de fuentes de Google */
-
+@import url("https://fonts.googleapis.com/css?family=Lobster");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 
@@ -139,7 +139,8 @@ nav a {
 /* Estilos para el banner */
 
 #bannerTexto {
-  font-size: 40px;
+  font-family: Lobster;
+  font-size: 60px;
   margin: auto;
   color: #33359a;
   text-align: center;
@@ -189,7 +190,7 @@ nav a {
   padding-top: 50px;
 }
 
-.menu {
+.indice {
   margin-top: 40px;
 }
 
@@ -300,6 +301,8 @@ p {
   font-family: "Times New Roman", Times, serif;
   font-size: 20px;
   cursor: pointer;
+  height: 200px;
+  width: 700px;
 }
 
 .tablaUno:hover {
@@ -371,7 +374,6 @@ h1 {
   background-clip: text;
   -webkit-background-clip: text; /* Compatibilidad con Webkit (Chrome, Safari) */
   animation: expand-rev 0.5s ease forwards;
-  cursor: pointer;
 }
 
 .gradient-text:hover {
@@ -411,8 +413,7 @@ h1 {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 30px;
-  margin: 80px;
+  margin: 90px;
 }
 
 .procesos .proceso1,
@@ -420,7 +421,7 @@ h1 {
 .procesos .proceso3 {
   position: relative;
   max-width: 300px;
-  height: 215px;
+  height: 250px;
   background-color: rgb(225, 207, 219);
   margin: 30px 10px;
   padding: 20px 15px;
@@ -432,16 +433,10 @@ h1 {
   align-items: center;
 }
 
-@media (max-width: 768px) {
-  .procesos {
-    gap: 80px;
-  }
-}
-
 .procesos .proceso1:hover,
 .procesos .proceso2:hover,
 .procesos .proceso3:hover {
-  height: 380px;
+  height: 400px;
 }
 
 .procesos .proceso1 .imagen1,
@@ -450,7 +445,7 @@ h1 {
   position: relative;
   width: 260px;
   height: 300px;
-  top: -40%;
+  top: -30%;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
   z-index: 1;
   border-radius: 15px;
@@ -467,8 +462,7 @@ h1 {
 .procesos .proceso2 .proceso2Texto,
 .procesos .proceso3 .proceso3Texto {
   position: relative;
-  top: -180px;
-  padding: 10px 15px;
+  top: -160px;
   color: #111;
   text-align: center;
   visibility: hidden;
@@ -485,8 +479,40 @@ h1 {
 .procesos .proceso1:hover .proceso1Texto,
 .procesos .proceso2:hover .proceso2Texto,
 .procesos .proceso3:hover .proceso3Texto {
-  margin-top: 20px;
+  margin-top: 40px;
   visibility: visible;
   opacity: 1;
   transition-delay: 0.2s;
+}
+
+/*Para ajustar a pantallas pequeñas*/
+
+@media (max-width: 900px) {
+  #bannerTexto {
+    font-size: 34px;
+  }
+
+  nav {
+    margin-top: 20vh;
+  }
+
+  .tablaUno {
+    height: 100px;
+    width: 200px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+  .procesos {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .procesos .proceso2 {
+    margin-top: 120px;
+  }
+  .procesos .proceso3 {
+    margin-top: 120px;
+  }
 }
