@@ -9,7 +9,7 @@ nav {
   background-color: #8ec4df;
   position: absolute;
   width: 140px;
-  height: 210px;
+  height: 250px;
   padding-top: 20px;
   padding-left: 10px;
   text-align: left;
@@ -42,7 +42,7 @@ nav a {
   text-decoration: none;
   display: block;
   font-family: "Times New Roman", Times, serif;
-  font-size: 16px;
+  font-size: 20px;
   margin-top: 10px;
 }
 
@@ -175,4 +175,14 @@ h1 span {
 
 .dragon {
   width: 100%;
+}
+
+@media (max-width: 800px) {
+  nav {
+    height: 220px;
+  }
+
+  nav a {
+    font-size: 16px;
+  }
 }

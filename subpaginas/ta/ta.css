@@ -23,7 +23,7 @@ nav {
   animation-duration: 3s;
   animation-fill-mode: forwards;
   left: 0;
-  margin-top: 22vh;
+  margin-top: 18vh;
   font-family: "Times New Roman", Times, serif;
 }
 
@@ -47,7 +47,7 @@ nav a {
   text-decoration: none;
   display: block;
   font-family: Arial, sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   font-family: "Times New Roman", Times, serif;
   margin-top: 10px;
 }
@@ -68,6 +68,7 @@ h1 {
   overflow: hidden; /* Evita el desbordamiento de texto */
   color: rgb(32, 54, 32);
   width: 500px;
+  font-size: 40px;
 }
 
 /* Animación de aparición para los textos de izquierda y derecha */
@@ -125,8 +126,8 @@ h1 {
   align-items: center;
   text-align: justify;
   padding: 1% 20% 3%;
-  font-size: 16px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
   width: 80%;
 }
 
@@ -155,8 +156,6 @@ td {
 
 .ejemplosTA {
   text-align: center;
-  font-size: 16px;
-  font-family: Arial, Helvetica, sans-serif;
   color: #0f632f;
 }
 
@@ -167,6 +166,7 @@ td {
   text-decoration: underline;
   animation: gelatine 5s infinite; /* Aplica la animación gelatina */
   margin: 40px;
+  font-size: 40px;
 }
 
 /* Animación de tipo gelatina para los títulos */
@@ -205,17 +205,19 @@ p {
   max-width: 60%;
   color: black;
   text-align: justify;
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 /* Estilo para los videos */
 
 video {
   display: flex;
-  flex-wrap: wrap;
   width: 60%;
   max-width: 100%;
   margin: 20px;
   left: 50%;
+  border-radius: 20px;
   view-timeline-name: --video;
   view-timeline-axis: block;
 
@@ -281,9 +283,9 @@ figure {
 /* Estilo para las imágenes dentro del slider */
 
 .slide img {
-  width: 100%; /* Las imágenes ocupan todo el contenedor */
-  height: 100%; /* Las imágenes ocupan toda la altura */
-  object-fit: contain; /* Ajusta la imagen sin recortarla */
+  width: 100%; /* Cambia según lo necesario */
+  height: 420px;
+  object-fit: cover;
 }
 
 /* Animación para el deslizamiento de imágenes */
@@ -327,4 +329,26 @@ figure {
   100% {
     left: 0;
   } /* Regresa a la posición inicial */
+}
+
+@media (max-width: 800px) {
+  nav {
+    margin-top: 30vh;
+  }
+
+  video {
+    width: 600px;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    margin-top: 26vh;
+  }
+
+  video {
+    width: 400px;
+    max-width: 400px;
+  }
 }
