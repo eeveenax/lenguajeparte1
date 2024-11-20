@@ -152,13 +152,6 @@ td {
   border-color: #0a3e76;
 }
 
-/* Estilo para los encabezados de la sección de ejemplos */
-
-.ejemplosTA {
-  text-align: center;
-  color: #0f632f;
-}
-
 /* Estilos para los títulos de los ejemplos con animación */
 
 #audiodescripcion,
@@ -167,6 +160,7 @@ td {
   animation: gelatine 5s infinite; /* Aplica la animación gelatina */
   margin: 40px;
   font-size: 40px;
+  color: #0f632f;
 }
 
 /* Animación de tipo gelatina para los títulos */
@@ -196,7 +190,7 @@ td {
   align-items: center;
   margin-left: 5%;
   margin-right: 5%;
-  max-width: 90%;
+  max-width: 100%;
 }
 
 /* Estilo para los párrafos */
@@ -343,12 +337,13 @@ figure {
 }
 
 @media (max-width: 600px) {
-  nav {
-    margin-top: 26vh;
+  video {
+    width: 500px;
+    max-width: 500px;
   }
 
-  video {
-    width: 400px;
-    max-width: 400px;
+  #audiodescripcion,
+  #descripcion_sordos {
+    font-size: 30px;
   }
 }
