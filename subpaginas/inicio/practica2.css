@@ -300,7 +300,6 @@ p {
   padding: 6px;
   font-family: "Times New Roman", Times, serif;
   font-size: 20px;
-  cursor: pointer;
   height: 200px;
   width: 700px;
 }
@@ -331,6 +330,7 @@ td {
   color: black;
   font-size: 20px;
   text-decoration: none;
+  cursor: pointer;
 }
 
 td a {

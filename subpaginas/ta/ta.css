@@ -139,6 +139,8 @@ h1 {
   border-color: #29425d;
   text-align: center; /* Alineación de texto al centro */
   margin-top: 20px;
+  background-image: url(img/tablaimagen.jpg);
+  background-size: contain;
 }
 
 /* Estilo para las celdas de la tabla */
@@ -150,6 +152,7 @@ th {
 td {
   color: black;
   border-color: #0a3e76;
+  font-weight: bolder;
 }
 
 /* Estilos para los títulos de los ejemplos con animación */
@@ -249,8 +252,8 @@ video {
 /* Estilos para el slider de imágenes */
 
 .slider {
-  width: 60%;
-  max-width: 60%;
+  width: 55%;
+  max-width: 55%;
   height: 400px;
   overflow: hidden; /* Oculta las imágenes fuera de la vista */
   position: relative; /* Posición relativa para manejar el movimiento */
@@ -287,37 +290,22 @@ figure {
   0% {
     left: 0;
   } /* Inicia en la posición original */
-  10% {
-    left: 0;
-  } /* Se mantiene en la misma posición */
-  20% {
+  25% {
     left: -100%;
   } /* Se mueve la primera imagen fuera de la vista */
-  30% {
-    left: -100%;
-  } /* La primera imagen permanece fuera */
-  45% {
+  40% {
     left: -200%;
-  } /* La segunda imagen desaparece */
-  50% {
-    left: -200%;
-  } /* La segunda imagen permanece fuera */
-  60% {
+  } /* La segunda imagen desaparece y entra tla tercera*/
+  55% {
     left: -300%;
   } /* La tercera imagen desaparece */
   65% {
-    left: -300%;
-  } /* La tercera imagen permanece fuera */
-  75% {
     left: -200%;
   } /* Vuelve a la segunda imagen */
-  80% {
+  75% {
     left: -100%;
   } /* Vuelve a la primera imagen */
   90% {
-    left: -100%;
-  } /* Permanece en la primera imagen */
-  95% {
     left: 0;
   } /* Vuelve a la posición inicial */
   100% {
@@ -345,6 +333,6 @@ figure {
   }
 
   .slide img {
-    height: 200px; /* Cambia la altura de las imágenes */
+    height: 200px; /* Cambia la altura de las imágenes a 200 píxeles*/
   }
 }
