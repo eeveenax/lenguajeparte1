@@ -1,1 +1,0 @@
-# lenguajeparte1

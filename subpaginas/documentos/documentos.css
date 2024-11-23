@@ -85,12 +85,12 @@ h1 span {
     radial-gradient(93% 83.5% at top, #0000 79.5%, #91fff6 80%) no-repeat;
   /* Usando gradientes radiales para crear efectos visuales en el texto */
 
-  -webkit-background-clip: text; /* Clipping del fondo solo sobre el texto */
+  -webkit-background-clip: text; /* Hace que el fondo (background) solo se aplique al área del texto, no al resto del elemento. */
   background-clip: text; /* Para Firefox, el mismo efecto */
   color: #0000; /* Texto transparente */
   -webkit-text-stroke: 0.2rem #2e3dc7; /* Agrega un borde a las letras */
   -webkit-box-decoration-break: clone;
-  box-decoration-break: clone; /* Rompe el contorno del texto para una mejor visualización */
+  box-decoration-break: clone; /*  Esta propiedad asegura que los efectos (como el contorno o el fondo) se apliquen de manera uniforme incluso cuando el texto ocupa varias líneas o está dividido./
   animation: first 2s infinite alternate, second 3s infinite linear; /* Animaciones para los gradientes */
 }
 
@@ -138,7 +138,7 @@ h1 span {
   align-items: center;
   margin: 8vh auto; /* Margen de 12vh desde el top, centrado horizontalmente */
   width: 400px;
-  text-align: center; /* Alineación del texto al centro */
+  text-align: center;
   background-color: #74c2ef;
   padding: 1cm;
 }

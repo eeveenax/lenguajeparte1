@@ -2,9 +2,9 @@
 body {
   display: flex;
   flex-direction: column;
-  background-image: url(img/pregunta.jpg); /* Se aplica una imagen de fondo (ajústala a la ruta de tu imagen) */
-  background-repeat: no-repeat; /* Se evita que la imagen de fondo se repita */
-  background-size: cover; /* La imagen de fondo cubre todo el área visible */
+  background-image: url(img/pregunta.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   text-align: center;
   align-items: center;
 }
@@ -88,9 +88,9 @@ p {
 /* Estilo para los elementos con la etiqueta span */
 
 span {
-  color: dark rgb(131, 40, 72); /* Establece un color morado oscuro para el texto dentro de los <span> */
-  text-decoration: underline; /* Subraya el texto dentro de los <span> */
-  font-weight: bold; /* Establece un peso de fuente negrita */
+  color: dark rgb(131, 40, 72);
+  text-decoration: underline;
+  font-weight: bold;
 }
 
 /* Efecto hover para los elementos con la etiqueta span */

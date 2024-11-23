@@ -68,7 +68,7 @@ p {
   font-family: "Lucida Console", monospace;
   font-size: 10px;
   letter-spacing: 1px; /* Añade un pequeño espacio entre las letras */
-  cursor: pointer; /* Cambia el cursor a puntero al pasar por encima */
+  cursor: pointer;
   box-shadow: inset 0 0 0 0 #d80286;
   -webkit-transition: ease-out 0.4s; /* Transición suave para navegadores Webkit */
   -moz-transition: ease-out 0.4s; /* Transición suave para navegadores Mozilla */

@@ -4,11 +4,11 @@
 /* Definición de variables para colores y estilos globales */
 :root {
   /* Colores principales del sitio */
-  --bg: black; /* Fondo de la página */
-  --clr-1: #00c2ff; /* Color 1*/
-  --clr-2: #33ff8c; /* Color 2*/
-  --clr-3: #ffc640; /* Color 3*/
-  --clr-4: #e54cff; /* Color 4*/
+  --bg: black;
+  --clr-1: #00c2ff;
+  --clr-2: #33ff8c;
+  --clr-3: #ffc640;
+  --clr-4: #e54cff;
 
   /* Propiedades de estilo que se usan en el diseño */
   --blur: 1rem; /* Desenfoque aplicado en las auroras */
@@ -66,28 +66,28 @@ body {
   letter-spacing: var(--ls); /* Espaciado de letras dinámico */
   position: relative; /* Se usa para posicionar elementos internos de forma absoluta */
   overflow: hidden; /* Esconde cualquier contenido fuera de los límites */
-  background: var(--bg); /* Fondo negro */
-  margin: 0; /* Elimina los márgenes */
+  background: var(--bg);
+  margin: 0;
 }
 
 /* Estilo para el contenedor de la aurora */
 .aurora {
-  position: absolute; /* Posición absoluta para que ocupe todo el espacio disponible */
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100%; /* Cubre todo el contenedor */
-  height: 100%; /* Cubre todo el contenedor */
-  z-index: 2; /* Asegura que se ubique encima del contenido */
+  width: 100%;
+  height: 100%;
+  z-index: 2;
   mix-blend-mode: darken; /* Mezcla el color de la aurora con el fondo */
   pointer-events: none; /* Desactiva la interacción con el mouse sobre este elemento */
 }
 
 /* Estilo de los elementos individuales de la aurora */
 .aurora__item {
-  overflow: hidden; /* Oculta cualquier cosa que sobresalga del área de cada item */
-  position: absolute; /* Posición absoluta dentro de su contenedor */
-  width: 60vw; /* Tamaño del elemento (60% del ancho de la ventana) */
-  height: 60vw; /* Tamaño del elemento (60% del ancho de la ventana) */
+  overflow: hidden;
+  position: absolute;
+  width: 60vw;
+  height: 60vw;
   background-color: var(
     --clr-1
   ); /* Color del elemento, se cambia en cada aurora */

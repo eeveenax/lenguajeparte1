@@ -2,8 +2,8 @@
 body {
   background-color: rgb(214, 241, 237);
   display: flex; /* Usa un diseño de tipo Flexbox */
-  flex-direction: column; /* Los elementos dentro del body se organizarán en una columna */
-  align-items: center; /* Centra los elementos en el eje horizontal */
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Estilo para la barra de navegación */
@@ -247,6 +247,8 @@ video {
   opacity: 0; /* Hace la imagen invisible al pasar el ratón */
 }
 
+/*División del contenedor en grid con columnas y filas*/
+
 .uno {
   grid-column: 1 / 5;
   grid-row: 1 / 3;
@@ -275,6 +277,8 @@ video {
 .seis {
   grid-column: 5 / 9;
 }
+
+/*Párrafos con otros grid*/
 
 .parrafo1 {
   bottom: 30%;
@@ -323,6 +327,8 @@ video {
   font-size: 30px;
 }
 
+/*Para pantalla peuqeñas*/
+
 @media (max-width: 800px) {
   .parrafo1,
   .parrafo2,
@@ -359,47 +365,7 @@ video {
   }
 
   .parrafo6 {
-    bottom: 40%; /* Ajusta la posición */
-    font-size: 20px; /* Tamaño más pequeño */
+    bottom: 40%;
+    font-size: 20px;
   }
-}
-
-.wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 200px;
-  width: 100%;
-}
-
-.card {
-  position: relative;
-  height: 100px;
-  width: 200px;
-  padding: 40px;
-  transform-style: preserve-3d;
-}
-
-.card .bg {
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: url("img/vanelope.png");
-  border-radius: 30px;
-  background-size: cover;
-  background-position: center;
-}
-
-.card a {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1; /* Asegura que el enlace esté por encima de la imagen de fondo */
-  text-decoration: none; /* Elimina el subrayado del enlace */
-  cursor: pointer;
 }

@@ -136,7 +136,7 @@ nav a {
   color: black;
 }
 
-/* Estilos para el banner */
+/* Estilos para el texto del banner y el banner */
 
 #bannerTexto {
   font-family: Lobster;
@@ -190,10 +190,12 @@ nav a {
   padding-top: 50px;
 }
 
+/*Lista del índice*/
+
 .indice {
   margin-top: 40px;
 }
-
+/*super índice*/
 #sup {
   font-family: "Times New Roman", Times, serif;
   color: rgb(194, 76, 162);
